@@ -15,7 +15,7 @@
 				@unless (Auth::check())
 	    			<a href="/login">Login</a>
 	    		@else
-	    			<a href="/login">Logout</a>	| <a href="/posts/create">Add New Post</a>	
+	    			<a href="/logout">Logout</a>	| <a href="/posts/create">Add New Post</a>	
 				@endunless
 			</span>
 		</header>

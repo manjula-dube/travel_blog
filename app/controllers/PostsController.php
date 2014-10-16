@@ -22,13 +22,13 @@ class PostsController extends BaseController{
 	}
 	function store() {
 		$post = new Post;
-		$post->tittle = Input :: get ('title');
+		$post->title = Input :: get ('title');
 		$post->body = Input :: get ('body');
 		$post->save();
 
 		$allPosts = DB::table('posts')->get();
 
-		return View::make('admin.allpost');
+		return "Added";
 
 	}
 

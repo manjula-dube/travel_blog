@@ -1,5 +1,6 @@
 <?php
 
+//Route to install 
 Route::get('/install',function(){
 
 	if(count(User::where('username','=','admin')->get()))

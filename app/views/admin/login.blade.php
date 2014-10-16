@@ -1,5 +1,21 @@
-Login Page
+@extends('layouts.default')
 
-Show login form here.
+@section('content')
+	{{ Form :: open(['route' =>'sessions.store']	)}}
 
-On for submit we goto sessions.store route via post.
+		<div>
+	    	{{ Form::label('username','Username:')}}
+	    	{{ Form::text('username')}}
+	    </div>
+
+	    <div>
+	    	{{ Form::label('password','Password:')}}
+	    	{{ Form::password('password')}}
+	    </div>
+
+	    <div>
+    		{{ Form::submit('Login') }}
+    	</div>
+
+	{{ Form :: close()}}
+@stop
