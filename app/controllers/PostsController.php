@@ -3,8 +3,10 @@
 class PostsController extends BaseController{
 
 	function show($postID){
-		//Only Admin Should See This OR The user himself..
-		return "Show post ".$postID;
+		if($post = Post::find($postID))
+			return View::make('viewpost',['post'=>$post]);
+		
+		return Redirect::to('/');
 	}
 	function edit($postID){
 		//Only Admin Should See This OR The user himself.
