@@ -4,7 +4,7 @@ class PostsController extends BaseController{
 
 	function show($postID){
 		if($post = Post::find($postID)){
-			$comments = Comment::where('postid','=',$postID);
+			$comments = Comment::where('postid','=',$postID)->get();
 			return View::make('viewpost',['post'=>$post, 'comments'=>$comments]);
 		}
 		

@@ -1,16 +1,5 @@
 <?php
 
-Route::get('/',function()
-{
-    $posts = Post::all();
-	return View::make('allposts', ['posts' => $posts]);
-	
-});
-
-Route::get('/create', 'PostsController@create');
-Route::get('/login', 'SessionsController@create');
-Route::get('/logout', 'SessionsController@destroy');
-Route::get('/view/{postid}', 'PostsController@show');
 Route::get('/install',function(){
 
 	if(count(User::where('username','=','admin')->get()))
@@ -23,6 +12,18 @@ Route::get('/install',function(){
 
 	return "Admin created with standard username and password.";
 });
+
+Route::get('/',function()
+{
+    $posts = Post::all();
+	return View::make('allposts', ['posts' => $posts]);
+	
+});
+
+Route::get('/create', 'PostsController@create');
+Route::get('/login', 'SessionsController@create');
+Route::get('/logout', 'SessionsController@destroy');
+Route::get('/view/{postid}', 'PostsController@show');
 
 //Route::Resource('users', 'UsersController');
 Route::Resource('sessions', 'SessionsController');

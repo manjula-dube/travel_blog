@@ -11,7 +11,13 @@
 	<body>
 		<header class="clearfix">
 			<h1><a href="/">Manjula's Travel Blog!</a></h1>
-			<span class="links"><a href="/login">Login</a></span>
+			<span class="links">
+				@unless (Auth::check())
+	    			<a href="/login">Login</a>
+	    		@else
+	    			<a href="/login">Logout</a>	| <a href="/posts/create">Add New Post</a>	
+				@endunless
+			</span>
 		</header>
 		<section id="container">
 		@yield('content')

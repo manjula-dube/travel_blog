@@ -1,0 +1,10 @@
+.comment{
+	margin-bottom:1em;
+	font-size: 1em;
+	padding: 5px;
+	background-color: lightgrey;
+	
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}

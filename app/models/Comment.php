@@ -10,13 +10,21 @@ class Comment extends Eloquent {
 	 */
 	protected $table = 'comments';
 
+	public $errors = "";
+
 	public function isValid(){
 		if(Post::find($this->postid))
-			if(strlen($this->name) > 0 && strlen($this->comment))
+			if(!strlen($this->name) > 0 )
 			{
-				return true;
+				$this->errors = "Please enter a name.";
+				return false;
 			}
-		return false;
+			if(!strlen($this->comment) > 0)
+			{
+				$this->errors = "Please enter a comment.";
+				return false;
+			}
+		return true;
 	}	
 
 	/**

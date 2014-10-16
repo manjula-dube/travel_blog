@@ -10,9 +10,11 @@ class CommentsController extends BaseController{
 		$comment->comment = Input :: get ('comment');
 		if($comment->isValid()){
 			$comment->save();
+			$response = $comment;
+			$response->status = "success";
 			return $comment;
 		}
-		return "The comment is not valid";
+		return ["error" => $comment->errors,"status"=>"failed"];
 
 		//Redirect::route('posts.index');
 	}

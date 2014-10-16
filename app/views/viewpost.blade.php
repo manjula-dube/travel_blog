@@ -13,6 +13,14 @@
 
 	<div>Comments:</div>
 
+	<div id="comments">
+		@foreach ($comments as $comment)
+			<div class="comment">
+				<span class="name">{{$comment->name}}: </span>{{$comment->comment}}
+			</div>
+		@endforeach
+	</div>
+
 	{{ Form :: open(['route' =>'comments.store', 'id' => 'comment-form']	)}}
 
 		<div>
@@ -37,5 +45,11 @@
 @section('footer')
 
 	{{HTML::script('/js/viewPost.js')}}
+
+@stop
+
+@section('head')
+
+	{{HTML::style('/css/comments.css')}}
 
 @stop
