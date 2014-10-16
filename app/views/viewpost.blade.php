@@ -11,7 +11,9 @@
 	<hr>
 	<br/>
 
-	{{ Form :: open(['route' =>'comments.store', 'id' => 'form-comment']	)}}
+	<div>Comments:</div>
+
+	{{ Form :: open(['route' =>'comments.store', 'id' => 'comment-form']	)}}
 
 		<div>
 			{{Form::hidden('postid',"$post->id")}}

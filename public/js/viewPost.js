@@ -7,7 +7,7 @@ jQuery(document).ready(function($){
             $(this).prop('action'), $(this).serialize(),
             function(data){
                 //response after the process. 
-                alert('Received ' + data);
+                console.log(data);
             },
             'json'
         ); 
