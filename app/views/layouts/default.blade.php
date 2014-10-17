@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		{{HTML::style('css/common.css')}}
 
 		<!-- Can use the following section to include view specific stylesheets. -->
@@ -22,6 +23,7 @@
 		<section id="container">
 		@yield('content')
 		{{HTML::script('/js/alienScript/jquery-1.11.1.min.js')}}
+		{{HTML::script('/js/common.js')}}
 		</section>
 
 		<!-- Can use the following section to include view specific javascripts. -->
