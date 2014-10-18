@@ -2,6 +2,11 @@
 
 @section('content')
 
+<!-- This page is shown once when you click on the title 
+of the particular post which lets you comment for that particular post
+and if you wish to return back to the list of the post again you can click on the 
+link Manjula Blogs in the header section  which will show you list of posts-->
+
 	<div class="post">
 		<h3>{{$post->title}}</h3>
 		<div>

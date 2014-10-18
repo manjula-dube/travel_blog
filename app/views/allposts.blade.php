@@ -2,6 +2,7 @@
 
 @section('content')
 
+<!-- It is used to show all the blogs on the home page-->
 		<div id="allBlogs">
 			@foreach ($posts as $post)
 				<div class="post">
