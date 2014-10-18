@@ -8,3 +8,8 @@
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
+
+#comment{
+	width: 98%;
+	min-width: 98%
+}

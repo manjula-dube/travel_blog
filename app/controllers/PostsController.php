@@ -27,9 +27,9 @@ class PostsController extends BaseController{
 		$post->save();
 
 		$allPosts = DB::table('posts')->get();
+		
 
-		return "Added";
-
+		return Redirect::to('/');
 	}
 
 }

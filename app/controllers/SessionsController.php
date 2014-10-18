@@ -4,14 +4,15 @@ class SessionsController extends BaseController{
 	public function create(){
 		if(Auth::check())
 			return Redirect::to('/');
-		return View::make('admin.login');
+		return View::make('admin.login',['response'=>'']);
 	}
 	public function store(){
 		if(Auth::attempt(Input::only('username','password'))){
 			return Redirect::to('/');
 		}
 		else{
-			return "Wrong Credentials";
+
+		return View::make('admin.login',['response'=>'Please verify username and password']);
 		}
 	}
 	public function destroy(){
