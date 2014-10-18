@@ -1,6 +1,7 @@
 @extends('layouts.default')
-
 @section('content')
+
+
 	{{ Form :: open(['route' =>'posts.store'])}}
 
 		<div>

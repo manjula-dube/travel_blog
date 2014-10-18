@@ -15,8 +15,6 @@ class CommentsController extends BaseController{
 			return $comment;
 		}
 		return ["error" => $comment->errors,"status"=>"failed"];
-
-		//Redirect::route('posts.index');
 	}
 
 }
