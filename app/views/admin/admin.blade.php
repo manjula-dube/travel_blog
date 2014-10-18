@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-	{{ Form :: open(['route' =>'posts.store']	)}}
+	{{ Form :: open(['route' =>'posts.store'])}}
 
 		<div>
 	    	{{ Form::text('title','',array('placeholder'=>'Title', 'id'=>'title'))}}

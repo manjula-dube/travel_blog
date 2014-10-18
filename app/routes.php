@@ -16,7 +16,8 @@ Route::get('/install',function(){
 
 Route::get('/',function()
 {
-    $posts = Post::all();
+	//We are getting the values in decending order since we need to show the latest post at the top the admin posted
+    $posts = Post::orderBy('id', 'DESC')->get();
 	return View::make('allposts', ['posts' => $posts]);
 	
 });
