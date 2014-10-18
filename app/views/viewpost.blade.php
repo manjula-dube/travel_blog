@@ -21,6 +21,7 @@
 		@endforeach
 	</div>
 
+    
 	{{ Form :: open(['route' =>'comments.store', 'id' => 'comment-form']	)}}
 
 		<div>
