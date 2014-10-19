@@ -13,10 +13,9 @@ link Manjula Blogs in the header section  which will show you list of posts-->
 			{{BBCode::parse($post->body)}}
 		</div>
 	</div>
-	<hr>
 	<br/>
 
-	<div>Comments:</div>
+	
 
 	<div id="comments">
 		@foreach ($comments as $comment)
