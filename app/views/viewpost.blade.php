@@ -9,6 +9,7 @@ link Manjula Blogs in the header section  which will show you list of posts-->
 
 	<div class="post">
 		<h3>{{$post->title}}</h3>
+		<div class="time">{{$post->created_at}}</div>
 		<div>
 			{{BBCode::parse($post->body)}}
 		</div>
