@@ -26,7 +26,7 @@
 @stop
 
 @section('footer')
-	<!-- Library included from http://www.wysibb.com/docs/ -->
+	<!-- Library included from http://www.wysibb.com/docs/  -BB codes -->
 	{{HTML::script('http://cdn.wysibb.com/js/jquery.wysibb.min.js')}}
 	{{HTML::script('/js/admin.js')}}
 @stop
